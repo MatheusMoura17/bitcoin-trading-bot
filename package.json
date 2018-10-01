@@ -1,0 +1,29 @@
+{
+  "name": "bitcoin-trading-bot",
+  "version": "1.0.0",
+  "description": "Bot de trading",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "lint": "tslint --project ./tsconfig.json",
+    "serve": "npm run build && npm start",
+    "start": "node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusMoura17/bitcoin-trading-bot.git"
+  },
+  "author": "Matheus Moura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusMoura17/bitcoin-trading-bot/issues"
+  },
+  "homepage": "https://github.com/MatheusMoura17/bitcoin-trading-bot#readme",
+  "devDependencies": {
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
