@@ -1,0 +1,27 @@
+{
+  "short_name": "Bitcoin Trading Bot",
+  "diplay": "standalone",
+  "orientation": "potrait",
+  "name": "Bitcoin Trading Bot",
+  "theme_color": "#ab0127",
+  "background_color": "#ffffff",
+  "scope": "https://MatheusMoura17.github.io/bitcoin-trading-bot/",
+  "start_url": "index.html",
+  "icons": [
+    {
+      "src": "images/launcher-icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "images/launcher-icon-2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "images/launcher-icon-4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+}
