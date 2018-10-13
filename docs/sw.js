@@ -1,32 +1,40 @@
 var CACHE_NAME = 'bitcoin-trading-bot-v1';
 
-var urlsToCache = [
-  '/',
-  '/index.html',
-  '/bitcoin-trading-bot.f69400ca.js'
-];
-
-self.addEventListener('install', function(event) {
-  // Perform install steps
+self.addEventListener('install', function (event) {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
+    caches.open(CACHE_NAME).then(function (cache) {
+      return cache.addAll([
+        'index.html',
+        'css/main.css',
+        'css/materialize.min.css',
+        'js/main.js',
+        'js/jquery.min.js',
+        'js/materialize.min.js',
+        'images/logo.png',
+      ]);
+    })
+  )
+});
+
+self.addEventListener('activate', function activator(event) {
+  event.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(keys
+        .filter(function (key) {
+          return key.indexOf(CACHE_NAME) !== 0;
+        })
+        .map(function (key) {
+          return caches.delete(key);
+        })
+      );
+    })
   );
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function (event) {
   event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
+    caches.match(event.request).then(function (cachedResponse) {
+      return cachedResponse || fetch(event.request);
+    })
   );
 });
