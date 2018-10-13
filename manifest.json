@@ -1,6 +1,8 @@
 {
   "short_name": "Bitcoin Trading Bot",
   "name": "Trading automatico de BTC <-> R$",
+  "diplay": "standalone",
+  "orientation": "potrait",
   "icons": [
     {
       "src": "launcher-icon-1x.png",
