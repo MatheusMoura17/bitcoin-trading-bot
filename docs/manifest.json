@@ -6,7 +6,7 @@
   "theme_color": "#ab0127",
   "background_color": "#ffffff",
   "scope": "https://MatheusMoura17.github.io/bitcoin-trading-bot/",
-  "start_url": "index.html",
+  "start_url": "https://MatheusMoura17.github.io/bitcoin-trading-bot/index.html",
   "icons": [
     {
       "src": "images/launcher-icon-1x.png",
