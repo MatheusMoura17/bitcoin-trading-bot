@@ -1,5 +1,5 @@
 {
-  "short_name": "Bitcoin Trading Bot",
+  "short_name": "BTB",
   "diplay": "standalone",
   "orientation": "potrait",
   "name": "Bitcoin Trading Bot",
@@ -22,6 +22,11 @@
       "src": "images/launcher-icon-4x.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "images/launcher-icon-4x.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
