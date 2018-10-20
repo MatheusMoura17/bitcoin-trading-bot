@@ -1,6 +1,6 @@
 {
   "short_name": "BTB",
-  "diplay": "standalone",
+  "display": "standalone",
   "orientation": "potrait",
   "name": "Bitcoin Trading Bot",
   "theme_color": "#ab0127",
