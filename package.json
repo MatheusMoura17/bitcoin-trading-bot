@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "parcel ./src/index.html",
+    "prebuild": "cp -R ./src/images ./dist/images",
+    "watch": "parcel ./src/index.html",
+    "start": "npm run prebuild && npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
