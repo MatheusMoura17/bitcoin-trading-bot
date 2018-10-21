@@ -22,7 +22,10 @@
     "url": "https://github.com/MatheusMoura17/bitcoin-trading-bot/issues"
   },
   "homepage": "https://github.com/MatheusMoura17/bitcoin-trading-bot#readme",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
   "devDependencies": {
     "parcel": "^1.10.3"
   }
