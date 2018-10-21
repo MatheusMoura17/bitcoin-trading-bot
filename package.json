@@ -6,9 +6,12 @@
   "directories": {
     "doc": "docs"
   },
+  "homepage": "http://Matheusmoura17.github.io/bitcoin-trading-bot",
   "scripts": {
-    "prebuild": "cp -R ./src/images ./dist/images",
+    "prebuild": "mkdir -p ./dist/images && cp -R ./src/images ./dist/images",
     "watch": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "deploy": "npm run prebuild && npm run build && gh-pages -d dist",
     "start": "npm run prebuild && npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,12 +24,12 @@
   "bugs": {
     "url": "https://github.com/MatheusMoura17/bitcoin-trading-bot/issues"
   },
-  "homepage": "https://github.com/MatheusMoura17/bitcoin-trading-bot#readme",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "parcel": "^1.10.3"
   }
 }
