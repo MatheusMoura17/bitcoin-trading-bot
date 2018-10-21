@@ -1,17 +1,17 @@
-var CACHE_NAME = 'bitcoin-trading-bot-v1';
+var CACHE_NAME = "bitcoin-trading-bot-v1";
 
-self.addEventListener('install', function (event) {
+self.addEventListener("install", function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll([
-        '/',
-        'https://fonts.googleapis.com/css?family=Roboto:300,400,500'
+        "/",
+        "https://fonts.googleapis.com/css?family=Roboto:300,400,500"
       ]);
     })
-  )
+  );
 });
 
-self.addEventListener('activate', function activator(event) {
+self.addEventListener("activate", function activator(event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(keys
@@ -26,7 +26,7 @@ self.addEventListener('activate', function activator(event) {
   );
 });
 
-self.addEventListener('fetch', function (event) {
+self.addEventListener("fetch", function (event) {
   event.respondWith(
     caches.match(event.request).then(function (cachedResponse) {
       return cachedResponse || fetch(event.request);

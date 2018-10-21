@@ -13,7 +13,8 @@
     "build": "parcel build ./src/index.html --public-url ./",
     "deploy": "npm run prebuild && npm run build && gh-pages -d dist",
     "start": "npm run prebuild && npm run watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -27,11 +28,13 @@
   "dependencies": {
     "@material-ui/core": "^3.3.0",
     "@material-ui/icons": "^3.0.1",
+    "eslint": "^5.7.0",
     "material-ui": "^0.20.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
+    "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.0.1",
     "parcel": "^1.10.3"
   }
