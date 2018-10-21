@@ -4,7 +4,8 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll([
-        '/'
+        '/',
+        'https://fonts.googleapis.com/css?family=Roboto:300,400,500'
       ]);
     })
   )

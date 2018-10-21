@@ -1,8 +1,12 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 class App extends React.Component {
   render() {
-    return <div>Olá eu sou um app</div>
+    return(
+    <Button variant="contained" color="primary">
+      Hello World
+    </Button>)
   }
 }
 
